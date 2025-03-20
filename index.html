@@ -6,8 +6,11 @@
     <title>Portafolio de Hoover Andres Serna Castañeda</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Nueva fuente de Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div id="dynamic-background"></div> <!-- Fondo dinámico -->
     <header>
         <div class="container">
             <h1>Hoover Andres Serna Castañeda</h1>
@@ -57,27 +60,46 @@
         </div>
     </section>
 
+    <!-- Sección de Contacto (mejorada) -->
     <section id="contact" class="container">
         <h2>Contacto</h2>
         <p>¿Tienes un proyecto en mente? ¡Contáctame!</p>
-        <div class="contact-info">
-            <ul class="contact-list">
-                <li>
-                    <a href="mailto:hoover.serna@ucp.edu.co">
-                        <i class="fas fa-envelope"></i> hoover.serna@ucp.edu.co
-                    </a>
-                </li>
-                <li>
-                    <a href="https://github.com/tuusuario" target="_blank">
-                        <i class="fab fa-github"></i> GitHub
-                    </a>
-                </li>
-                <li>
-                    <a href="https://linkedin.com/in/tuusuario" target="_blank">
-                        <i class="fab fa-linkedin"></i> LinkedIn
-                    </a>
-                </li>
-            </ul>
+        <div class="contact-container">
+            <!-- Formulario de contacto -->
+            <div class="contact-form">
+                <form id="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Correo electrónico" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Mensaje" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Enviar Mensaje</button>
+                </form>
+            </div>
+            <!-- Información de contacto -->
+            <div class="contact-info">
+                <ul class="contact-list">
+                    <li>
+                        <a href="mailto:hoover.serna@ucp.edu.co">
+                            <i class="fas fa-envelope"></i> hoover.serna@ucp.edu.co
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/tuusuario" target="_blank">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://linkedin.com/in/tuusuario" target="_blank">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </section>
 
