@@ -1,6 +1,6 @@
 /* Estilos generales */
 body {
-    font-family: 'Poppins', sans-serif; /* Nueva fuente */
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f9;
@@ -20,6 +20,13 @@ body {
     overflow: hidden;
 }
 
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
 /* Header */
 header {
     position: relative;
@@ -34,14 +41,14 @@ header {
 header h1 {
     margin: 0;
     font-size: 2.5rem;
-    font-weight: 700; /* Más gruesa para títulos */
+    font-weight: 700;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 header p {
     margin: 5px 0 0;
     font-size: 1.2rem;
-    font-weight: 500; /* Semi-gruesa para subtítulos */
+    font-weight: 500;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
@@ -59,7 +66,7 @@ nav ul li {
 nav ul li a {
     color: #fff;
     text-decoration: none;
-    font-weight: 600; /* Semi-gruesa para enlaces */
+    font-weight: 600;
     transition: color 0.3s ease;
 }
 
@@ -93,7 +100,7 @@ nav ul li a:hover {
 }
 
 .about-text p {
-    font-weight: 400; /* Normal para texto */
+    font-weight: 400;
 }
 
 /* Projects Section */
@@ -124,13 +131,13 @@ nav ul li a:hover {
 .project-card h3 {
     margin: 15px 0 10px;
     color: #333;
-    font-weight: 600; /* Semi-gruesa para títulos de proyectos */
+    font-weight: 600;
 }
 
 .project-card p {
     margin: 0 0 15px;
     color: #666;
-    font-weight: 400; /* Normal para descripciones */
+    font-weight: 400;
 }
 
 .btn {
@@ -141,7 +148,7 @@ nav ul li a:hover {
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
-    font-weight: 500; /* Semi-gruesa para botones */
+    font-weight: 500;
 }
 
 .btn:hover {
@@ -157,8 +164,8 @@ nav ul li a:hover {
 
 .contact-container {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
     gap: 40px;
     max-width: 1000px;
     margin: 0 auto;
@@ -166,7 +173,8 @@ nav ul li a:hover {
 }
 
 .contact-form {
-    flex: 1;
+    width: 100%;
+    max-width: 500px;
     background: rgba(255, 255, 255, 0.9);
     padding: 30px;
     border-radius: 15px;
@@ -190,7 +198,7 @@ nav ul li a:hover {
     border: 1px solid #ddd;
     border-radius: 8px;
     font-size: 1rem;
-    font-family: 'Poppins', sans-serif; /* Nueva fuente para el formulario */
+    font-family: 'Poppins', sans-serif;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -206,7 +214,8 @@ nav ul li a:hover {
 }
 
 .contact-info {
-    flex: 1;
+    width: 100%;
+    max-width: 500px;
     background: rgba(255, 255, 255, 0.9);
     padding: 30px;
     border-radius: 15px;
@@ -232,7 +241,7 @@ nav ul li a:hover {
     color: #007BFF;
     text-decoration: none;
     font-size: 1.2rem;
-    font-weight: 500; /* Semi-gruesa para enlaces de contacto */
+    font-weight: 500;
     display: flex;
     align-items: center;
     transition: color 0.3s ease;
@@ -258,7 +267,7 @@ footer {
 
 footer p {
     margin: 0;
-    font-weight: 400; /* Normal para el footer */
+    font-weight: 400;
 }
 
 /* Estilos para las partículas */
@@ -280,5 +289,35 @@ footer p {
     100% {
         transform: translateY(-100vh) translateX(-50vw);
         opacity: 0;
+    }
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .contact-form,
+    .contact-info {
+        width: 100%;
+        max-width: 100%;
     }
 }
