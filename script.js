@@ -1,122 +1,95 @@
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
-    });
-});
-
-// Navegación activa basada en scroll
-window.addEventListener('scroll', () => {
-    const sections = document.querySelectorAll('section');
-    const navLinks = document.querySelectorAll('nav a');
-    
-    let current = '';
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        if (scrollY >= (sectionTop - 200)) {
-            current = section.getAttribute('id');
-        }
-    });
-
-    navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${current}`) {
-            link.classList.add('active');
-        }
-    });
-});
-
-// Animación de aparición en scroll (Intersection Observer)
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
+// Configuración global
+const config = {
+    typingSpeed: 100,
+    typingDelay: 2000,
+    scrollOffset: 100
 };
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
+// Textos para el efecto de escritura
+const typingTexts = [
+    "Desarrollador Full Stack",
+    "Creador de Experiencias Web",
+    "Especialista en JavaScript",
+    "Apasionado por la Innovación"
+];
+
+// Inicialización cuando carga el DOM
+document.addEventListener('DOMContentLoaded', function() {
+    initializeApp();
+});
+
+// Función principal de inicialización
+function initializeApp() {
+    initTypingEffect();
+    initSmoothScrolling();
+    initActiveNavigation();
+    initScrollAnimations();
+    initContactForm();
+    initNavbarEffects();
+    initParallaxEffects();
+}
+
+// Efecto de escritura en el hero
+function initTypingEffect() {
+    const typingElement = document.querySelector('.typing-text');
+    if (!typingElement) return;
+
+    let currentTextIndex = 0;
+    let currentCharIndex = 0;
+    let isDeleting = false;
+
+    function typeText() {
+        const currentText = typingTexts[currentTextIndex];
+        
+        if (isDeleting) {
+            typingElement.textContent = currentText.substring(0, currentCharIndex - 1);
+            currentCharIndex--;
+        } else {
+            typingElement.textContent = currentText.substring(0, currentCharIndex + 1);
+            currentCharIndex++;
         }
-    });
-}, observerOptions);
 
-// Observar todos los elementos con clase fade-in
-document.querySelectorAll('.fade-in').forEach(el => {
-    observer.observe(el);
-});
+        let typeSpeed = isDeleting ? config.typingSpeed / 2 : config.typingSpeed;
 
-// Manejo del formulario de contacto
-document.getElementById('contact-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    // Obtener datos del formulario
-    const formData = new FormData(this);
-    const name = formData.get('name');
-    const email = formData.get('email');
-    const message = formData.get('message');
-    
-    // Validación básica
-    if (!name || !email || !message) {
-        showMessage('Por favor, completa todos los campos.', 'error');
-        return;
+        if (!isDeleting && currentCharIndex === currentText.length) {
+            typeSpeed = config.typingDelay;
+            isDeleting = true;
+        } else if (isDeleting && currentCharIndex === 0) {
+            isDeleting = false;
+            currentTextIndex = (currentTextIndex + 1) % typingTexts.length;
+            typeSpeed = 500;
+        }
+
+        setTimeout(typeText, typeSpeed);
     }
-    
-    // Simular envío del formulario
-    const button = this.querySelector('button[type="submit"]');
-    const originalText = button.innerHTML;
-    
-    // Estado de carga
-    button.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
-    button.disabled = true;
-    
-    // Simular tiempo de envío
-    setTimeout(() => {
-        button.innerHTML = '<i class="fas fa-check"></i> ¡Mensaje Enviado!';
-        button.style.background = '#10b981';
-        
-        // Mostrar mensaje de éxito
-        showMessage('¡Gracias por tu mensaje! Te contactaré pronto.', 'success');
-        
-        // Resetear formulario después de 2 segundos
-        setTimeout(() => {
-            button.innerHTML = originalText;
-            button.disabled = false;
-            button.style.background = '';
-            this.reset();
-        }, 2000);
-    }, 1500);
-});
 
-// Función para mostrar mensajes
-function showMessage(text, type) {
-    // Crear elemento de mensaje
-    const messageEl = document.createElement('div');
-    messageEl.className = `message ${type}`;
-    messageEl.innerHTML = `
-        <i class="fas ${type === 'success' ? 'fa-check-circle' : 'fa-exclamation-triangle'}"></i>
-        <span>${text}</span>
-    `;
-    
-    // Estilos del mensaje
-    Object.assign(messageEl.style, {
-        position: 'fixed',
-        top: '20px',
-        right: '20px',
-        padding: '1rem 1.5rem',
-        borderRadius: '10px',
-        color: 'white',
-        fontSize: '0.9rem',
-        fontWeight: '500',
-        zIndex: '10000',
-        transform: 'translateX(400px)',
-        transition: 'transform 0.3s ease',
-        background: type === 'success' ? '#10b981' : '#ef4444',
-        boxShadow: '0 4px 12px rgba(0, 0, 0, 0.15)'
+    typeText();
+}
+
+// Navegación suave
+function initSmoothScrolling() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            
+            if (target) {
+                const offsetTop = target.offsetTop - config.scrollOffset;
+                
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                });
+
+                // Cerrar menú móvil si está abierto
+                const navMenu = document.querySelector('.nav-menu');
+                if (navMenu.classList.contains('active')) {
+                    navMenu.classList.remove('active');
+                    document.querySelector('.nav-toggle').classList.remove('active');
+                }
+            }
+        });
     });
+}
+
+// Navegación activa basada

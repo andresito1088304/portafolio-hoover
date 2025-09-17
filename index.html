@@ -5,223 +5,531 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hoover Andrés Serna Castañeda - Desarrollador Full Stack</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <div class="logo">Hoover Serna</div>
-            <nav>
-                <ul>
-                    <li><a href="#home" class="active">Inicio</a></li>
-                    <li><a href="#about">Sobre Mí</a></li>
-                    <li><a href="#projects">Proyectos</a></li>
-                    <li><a href="#contact">Contacto</a></li>
-                </ul>
-            </nav>
+    <!-- Partículas de fondo -->
+    <div id="particles-js"></div>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">Hoover</span>
+                <span class="logo-dot">.</span>
+            </div>
+            <div class="nav-menu">
+                <a href="#home" class="nav-link active">
+                    <i class="fas fa-home"></i>
+                    <span>Inicio</span>
+                </a>
+                <a href="#about" class="nav-link">
+                    <i class="fas fa-user"></i>
+                    <span>Sobre Mí</span>
+                </a>
+                <a href="#projects" class="nav-link">
+                    <i class="fas fa-briefcase"></i>
+                    <span>Proyectos</span>
+                </a>
+                <a href="#contact" class="nav-link">
+                    <i class="fas fa-envelope"></i>
+                    <span>Contacto</span>
+                </a>
+            </div>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
-    </header>
+    </nav>
 
+    <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Hoover Andrés Serna</h1>
-                <div class="subtitle">Desarrollador Full Stack</div>
-                <p>Especializado en desarrollo web moderno con JavaScript, React, Node.js y tecnologías emergentes. Creando soluciones digitales innovadoras desde Pereira, Colombia.</p>
+        <div class="hero-background">
+            <div class="hero-shape shape-1"></div>
+            <div class="hero-shape shape-2"></div>
+            <div class="hero-shape shape-3"></div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="hero-greeting">
+                    <span class="wave">👋</span>
+                    <span>¡Hola! Soy</span>
+                </div>
+                <h1 class="hero-title">
+                    <span class="gradient-text">Hoover Andrés</span>
+                    <br>Serna Castañeda
+                </h1>
+                <div class="hero-subtitle">
+                    <span class="typing-text"></span>
+                    <span class="cursor">|</span>
+                </div>
+                <p class="hero-description">
+                    Desarrollador Full Stack apasionado por crear experiencias digitales excepcionales. 
+                    Especializado en tecnologías modernas y soluciones innovadoras.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">5+</div>
+                        <div class="stat-label">Proyectos</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">2+</div>
+                        <div class="stat-label">Años</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Dedicación</div>
+                    </div>
+                </div>
                 <div class="hero-buttons">
                     <a href="#projects" class="btn btn-primary">
-                        <i class="fas fa-code"></i>
-                        Ver Proyectos
+                        <span>Ver Proyectos</span>
+                        <i class="fas fa-arrow-right"></i>
                     </a>
                     <a href="#contact" class="btn btn-outline">
-                        <i class="fas fa-envelope"></i>
-                        Contáctame
+                        <span>Contáctame</span>
+                        <i class="fas fa-paper-plane"></i>
                     </a>
                 </div>
             </div>
+            
+            <div class="hero-image">
+                <div class="image-container">
+                    <div class="image-glow"></div>
+                    <img src="assets/images/profile.jpg" alt="Hoover Serna" class="profile-image">
+                    <div class="floating-card card-1">
+                        <i class="fab fa-react"></i>
+                        <span>React</span>
+                    </div>
+                    <div class="floating-card card-2">
+                        <i class="fab fa-node-js"></i>
+                        <span>Node.js</span>
+                    </div>
+                    <div class="floating-card card-3">
+                        <i class="fab fa-js-square"></i>
+                        <span>JavaScript</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <div class="scroll-text">Scroll</div>
+            <div class="scroll-line"></div>
         </div>
     </section>
 
+    <!-- About Section -->
     <section id="about" class="about">
+        <div class="section-background">
+            <div class="bg-shape bg-shape-1"></div>
+            <div class="bg-shape bg-shape-2"></div>
+        </div>
+        
         <div class="container">
-            <h2 class="section-title fade-in">Sobre Mí</h2>
+            <div class="section-header">
+                <span class="section-tag">Conoce más</span>
+                <h2 class="section-title">
+                    Sobre <span class="gradient-text">Mí</span>
+                </h2>
+                <p class="section-subtitle">
+                    Mi pasión por la tecnología y el desarrollo
+                </p>
+            </div>
+            
             <div class="about-content">
-                <div class="about-image fade-in">
-                    <div class="profile-img">
-                        <i class="fas fa-user"></i>
+                <div class="about-text">
+                    <div class="text-block">
+                        <h3>¡Hola de nuevo!</h3>
+                        <p>
+                            Soy un desarrollador de software apasionado por crear soluciones digitales innovadoras. 
+                            Con experiencia en desarrollo full-stack, me especializo en construir aplicaciones web 
+                            modernas, escalables y centradas en la experiencia del usuario.
+                        </p>
+                        <p>
+                            Mi enfoque combina creatividad técnica con resolución práctica de problemas, 
+                            siempre buscando las mejores prácticas y las tecnologías más actuales del mercado.
+                        </p>
                     </div>
-                </div>
-                <div class="about-text fade-in">
-                    <h3>¡Hola! Soy Hoover</h3>
-                    <p>Desarrollador de software apasionado por crear experiencias digitales excepcionales. Con experiencia sólida en el desarrollo full-stack, me especializo en construir aplicaciones web modernas, escalables y centradas en el usuario.</p>
-                    <p>Siempre estoy buscando nuevos desafíos que me permitan crecer profesionalmente y contribuir con soluciones innovadoras. Me encanta trabajar en equipo y aprender nuevas tecnologías.</p>
                     
-                    <div class="skills">
-                        <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">React</span>
-                        <span class="skill-tag">Node.js</span>
-                        <span class="skill-tag">HTML5</span>
-                        <span class="skill-tag">CSS3</span>
-                        <span class="skill-tag">Git</span>
-                        <span class="skill-tag">MongoDB</span>
-                        <span class="skill-tag">Express</span>
+                    <div class="skills-section">
+                        <h4>Tecnologías que domino</h4>
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fab fa-js-square"></i>
+                                </div>
+                                <div class="skill-info">
+                                    <span class="skill-name">JavaScript</span>
+                                    <span class="skill-level">Avanzado</span>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fab fa-react"></i>
+                                </div>
+                                <div class="skill-info">
+                                    <span class="skill-name">React</span>
+                                    <span class="skill-level">Avanzado</span>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fab fa-node-js"></i>
+                                </div>
+                                <div class="skill-info">
+                                    <span class="skill-name">Node.js</span>
+                                    <span class="skill-level">Intermedio</span>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fas fa-database"></i>
+                                </div>
+                                <div class="skill-info">
+                                    <span class="skill-name">MongoDB</span>
+                                    <span class="skill-level">Intermedio</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="cta-section">
+                        <a href="#" class="btn btn-primary">
+                            <span>Descargar CV</span>
+                            <i class="fas fa-download"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="about-visual">
+                    <div class="visual-card">
+                        <div class="card-header">
+                            <div class="card-dots">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                            </div>
+                            <span class="card-title">about-me.js</span>
+                        </div>
+                        <div class="card-content">
+                            <div class="code-line">
+                                <span class="code-keyword">const</span> 
+                                <span class="code-variable">developer</span> 
+                                <span class="code-operator">=</span> 
+                                <span class="code-bracket">{</span>
+                            </div>
+                            <div class="code-line indent">
+                                <span class="code-property">name:</span> 
+                                <span class="code-string">"Hoover Serna"</span><span class="code-comma">,</span>
+                            </div>
+                            <div class="code-line indent">
+                                <span class="code-property">location:</span> 
+                                <span class="code-string">"Pereira, Colombia"</span><span class="code-comma">,</span>
+                            </div>
+                            <div class="code-line indent">
+                                <span class="code-property">skills:</span> 
+                                <span class="code-bracket">[</span>
+                                <span class="code-string">"JavaScript"</span><span class="code-comma">,</span>
+                            </div>
+                            <div class="code-line indent-2">
+                                <span class="code-string">"React"</span><span class="code-comma">,</span> 
+                                <span class="code-string">"Node.js"</span><span class="code-bracket">]</span><span class="code-comma">,</span>
+                            </div>
+                            <div class="code-line indent">
+                                <span class="code-property">passion:</span> 
+                                <span class="code-string">"Creating amazing UX"</span>
+                            </div>
+                            <div class="code-line">
+                                <span class="code-bracket">}</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="projects">
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
         <div class="container">
-            <h2 class="section-title fade-in">Proyectos Destacados</h2>
+            <div class="section-header">
+                <span class="section-tag">Portfolio</span>
+                <h2 class="section-title">
+                    Proyectos <span class="gradient-text">Destacados</span>
+                </h2>
+                <p class="section-subtitle">
+                    Algunos de mis trabajos más recientes
+                </p>
+            </div>
+            
             <div class="projects-grid">
-                <div class="project-card fade-in">
+                <div class="project-card featured">
                     <div class="project-image">
-                        <i class="fas fa-calendar-check"></i>
+                        <img src="assets/images/project1.jpg" alt="Sistema de Reservas">
+                        <div class="project-overlay">
+                            <div class="overlay-content">
+                                <a href="#" class="overlay-btn">
+                                    <i class="fas fa-eye"></i>
+                                    Ver Demo
+                                </a>
+                                <a href="#" class="overlay-btn">
+                                    <i class="fab fa-github"></i>
+                                    Código
+                                </a>
+                            </div>
+                        </div>
                     </div>
                     <div class="project-content">
-                        <h3>Sistema de Gestión de Reservas</h3>
-                        <p>Aplicación web completa para la gestión de reservas de canchas sintéticas. Incluye panel de administración, sistema de pagos y notificaciones en tiempo real.</p>
-                        <div class="project-tags">
-                            <span class="tag">JavaScript</span>
-                            <span class="tag">Node.js</span>
-                            <span class="tag">Express</span>
-                            <span class="tag">MongoDB</span>
+                        <div class="project-header">
+                            <span class="project-tag featured">Destacado</span>
+                            <h3>Sistema de Gestión de Reservas</h3>
                         </div>
-                        <div class="project-links">
-                            <a href="#" class="btn btn-primary btn-small">
-                                <i class="fas fa-external-link-alt"></i>
-                                Ver Demo
-                            </a>
-                            <a href="#" class="btn btn-outline btn-small">
-                                <i class="fab fa-github"></i>
-                                Código
-                            </a>
+                        <p class="project-description">
+                            Aplicación web completa para la gestión de reservas de canchas sintéticas. 
+                            Incluye panel de administración, sistema de pagos integrado y notificaciones en tiempo real.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Express</span>
+                            <span class="tech-tag">MongoDB</span>
+                        </div>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <i class="fas fa-star"></i>
+                                <span>Principal</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-calendar"></i>
+                                <span>2024</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="project-card fade-in">
+                
+                <div class="project-card">
                     <div class="project-image">
-                        <i class="fas fa-shopping-cart"></i>
+                        <div class="placeholder-image">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="overlay-content">
+                                <a href="#" class="overlay-btn">
+                                    <i class="fas fa-eye"></i>
+                                    Ver Demo
+                                </a>
+                                <a href="#" class="overlay-btn">
+                                    <i class="fab fa-github"></i>
+                                    Código
+                                </a>
+                            </div>
+                        </div>
                     </div>
                     <div class="project-content">
-                        <h3>E-Commerce Platform</h3>
-                        <p>Plataforma de comercio electrónico moderna con carrito de compras, pasarela de pagos integrada y panel administrativo completo.</p>
-                        <div class="project-tags">
-                            <span class="tag">React</span>
-                            <span class="tag">Node.js</span>
-                            <span class="tag">Stripe</span>
-                            <span class="tag">PostgreSQL</span>
+                        <div class="project-header">
+                            <h3>E-Commerce Platform</h3>
                         </div>
-                        <div class="project-links">
-                            <a href="#" class="btn btn-primary btn-small">
-                                <i class="fas fa-external-link-alt"></i>
-                                Ver Demo
-                            </a>
-                            <a href="#" class="btn btn-outline btn-small">
-                                <i class="fab fa-github"></i>
-                                Código
-                            </a>
+                        <p class="project-description">
+                            Plataforma de comercio electrónico moderna con carrito de compras y pasarela de pagos integrada.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Stripe</span>
+                            <span class="tech-tag">PostgreSQL</span>
                         </div>
                     </div>
                 </div>
-
-                <div class="project-card fade-in">
+                
+                <div class="project-card">
                     <div class="project-image">
-                        <i class="fas fa-tasks"></i>
+                        <div class="placeholder-image">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="overlay-content">
+                                <a href="#" class="overlay-btn">
+                                    <i class="fas fa-eye"></i>
+                                    Ver Demo
+                                </a>
+                                <a href="#" class="overlay-btn">
+                                    <i class="fab fa-github"></i>
+                                    Código
+                                </a>
+                            </div>
+                        </div>
                     </div>
                     <div class="project-content">
-                        <h3>Task Management App</h3>
-                        <p>Aplicación de gestión de tareas con funcionalidades avanzadas como colaboración en tiempo real, etiquetas personalizadas y reportes de productividad.</p>
-                        <div class="project-tags">
-                            <span class="tag">React</span>
-                            <span class="tag">Socket.io</span>
-                            <span class="tag">Chart.js</span>
-                            <span class="tag">Firebase</span>
+                        <div class="project-header">
+                            <h3>Task Management App</h3>
                         </div>
-                        <div class="project-links">
-                            <a href="#" class="btn btn-primary btn-small">
-                                <i class="fas fa-external-link-alt"></i>
-                                Ver Demo
-                            </a>
-                            <a href="#" class="btn btn-outline btn-small">
-                                <i class="fab fa-github"></i>
-                                Código
-                            </a>
+                        <p class="project-description">
+                            Aplicación de gestión de tareas con colaboración en tiempo real y reportes de productividad.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Socket.io</span>
+                            <span class="tech-tag">Firebase</span>
                         </div>
                     </div>
                 </div>
             </div>
+            
+            <div class="projects-cta">
+                <p>¿Quieres ver más proyectos?</p>
+                <a href="https://github.com/andresito1088304" target="_blank" class="btn btn-outline">
+                    <span>Ver en GitHub</span>
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
         </div>
     </section>
 
+    <!-- Contact Section -->
     <section id="contact" class="contact">
+        <div class="section-background">
+            <div class="bg-shape bg-shape-3"></div>
+            <div class="bg-shape bg-shape-4"></div>
+        </div>
+        
         <div class="container">
-            <h2 class="section-title fade-in">Contáctame</h2>
-            <p class="contact-subtitle fade-in">
-                ¿Tienes un proyecto interesante? ¡Me encantaría conocer más detalles!
-            </p>
-            <div class="contact-container">
-                <div class="contact-form fade-in">
-                    <form id="contact-form">
-                        <div class="form-group">
-                            <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+            <div class="section-header">
+                <span class="section-tag">¡Hablemos!</span>
+                <h2 class="section-title">
+                    <span class="gradient-text">Contáctame</span>
+                </h2>
+                <p class="section-subtitle">
+                    ¿Tienes una idea increíble? ¡Hagámosla realidad juntos!
+                </p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-card">
+                        <div class="card-icon">
+                            <i class="fas fa-map-marker-alt"></i>
                         </div>
-                        <div class="form-group">
-                            <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required>
+                        <div class="card-content">
+                            <h4>Ubicación</h4>
+                            <p>Pereira, Colombia</p>
                         </div>
-                        <div class="form-group">
-                            <textarea id="message" name="message" placeholder="Cuéntame sobre tu proyecto..." rows="5" required></textarea>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="card-icon">
+                            <i class="fas fa-envelope"></i>
                         </div>
+                        <div class="card-content">
+                            <h4>Email</h4>
+                            <p>hoover.serna@ucp.edu.co</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="card-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="card-content">
+                            <h4>Disponibilidad</h4>
+                            <p>Lun - Vie, 8AM - 6PM</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <h4>Sígueme en:</h4>
+                        <div class="social-buttons">
+                            <a href="https://github.com/andresito1088304" target="_blank" class="social-btn">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/hoover-andres-serna-casta%C3%B1eda-3a67b0337/?originalSubdomain=co" target="_blank" class="social-btn">
+                                <i class="fab fa-linkedin"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="contact-form" class="form">
+                        <div class="form-header">
+                            <h3>Envíame un mensaje</h3>
+                            <p>Respondo en menos de 24 horas</p>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="name">Nombre completo</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Correo electrónico</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Asunto</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Selecciona un asunto</option>
+                                <option value="proyecto">Nuevo Proyecto</option>
+                                <option value="colaboracion">Colaboración</option>
+                                <option value="consulta">Consulta General</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Mensaje</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Cuéntame sobre tu proyecto o idea..." required></textarea>
+                        </div>
+                        
                         <button type="submit" class="btn btn-primary btn-full">
+                            <span>Enviar Mensaje</span>
                             <i class="fas fa-paper-plane"></i>
-                            Enviar Mensaje
                         </button>
                     </form>
                 </div>
-                
-                <div class="contact-info fade-in">
-                    <a href="mailto:hoover.serna@ucp.edu.co" class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <strong>Email</strong>
-                            <div>hoover.serna@ucp.edu.co</div>
-                        </div>
-                    </a>
-                    
-                    <a href="https://github.com/andresito1088304" target="_blank" class="contact-item">
-                        <i class="fab fa-github"></i>
-                        <div>
-                            <strong>GitHub</strong>
-                            <div>github.com/andresito1088304</div>
-                        </div>
-                    </a>
-                    
-                    <a href="https://www.linkedin.com/in/hoover-andres-serna-casta%C3%B1eda-3a67b0337/?originalSubdomain=co" target="_blank" class="contact-item">
-                        <i class="fab fa-linkedin"></i>
-                        <div>
-                            <strong>LinkedIn</strong>
-                            <div>Perfil Profesional</div>
-                        </div>
-                    </a>
-                    
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <strong>Ubicación</strong>
-                            <div>Pereira, Colombia</div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
 
-    <footer>
+    <!-- Footer -->
+    <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Hoover Andrés Serna Castañeda. Diseñado y desarrollado con ❤️</p>
+            <div class="footer-content">
+                <div class="footer-info">
+                    <div class="footer-logo">
+                        <span class="logo-text">Hoover</span>
+                        <span class="logo-dot">.</span>
+                    </div>
+                    <p>Desarrollador Full Stack apasionado por crear experiencias digitales excepcionales.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Navegación</h4>
+                        <a href="#home">Inicio</a>
+                        <a href="#about">Sobre Mí</a>
+                        <a href="#projects">Proyectos</a>
+                        <a href="#contact">Contacto</a>
+                    </div>
+                    
+                    <div class="link-group">
+                        <h4>Redes</h4>
+                        <a href="https://github.com/andresito1088304" target="_blank">GitHub</a>
+                        <a href="https://www.linkedin.com/in/hoover-andres-serna-casta%C3%B1eda-3a67b0337/?originalSubdomain=co" target="_blank">LinkedIn</a>
+                        <a href="mailto:hoover.serna@ucp.edu.co">Email</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Hoover Andrés Serna Castañeda. Hecho con ❤️ en Pereira, Colombia.</p>
+            </div>
         </div>
     </footer>
 
