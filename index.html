@@ -1,96 +1,21 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Portafolio | Hoover Andres Serna Castañeda - Desarrollador de Software</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"/>
-    <style>
-        /* Estilos básicos para demo */
-        :root {
-            --bg: #0f172a;
-            --card: #0b1220;
-            --accent: #4f46e5;
-            --muted: #94a3b8;
-            --text: #e6eef8;
-            font-family: 'Poppins', sans-serif;
-        }
-        *{box-sizing:border-box}
-        body{
-            margin:0;
-            background: linear-gradient(180deg,#071024 0%, #0b1220 100%);
-            color:var(--text);
-            -webkit-font-smoothing:antialiased;
-            -moz-osx-font-smoothing:grayscale;
-            line-height:1.5;
-        }
-        .container{max-width:1000px;margin:0 auto;padding:24px}
-        header{padding:28px 0;text-align:center}
-        header h1{margin:0;font-size:1.8rem}
-        header p{margin:6px 0;color:var(--muted)}
-        nav ul{list-style:none;padding:0;display:flex;gap:12px;justify-content:center;margin-top:12px}
-        nav a{color:var(--muted);text-decoration:none}
-        section{margin-top:28px}
-        h2{color:var(--text);margin-bottom:16px}
-
-        /* Projects grid */
-        .projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
-        .project-card{
-            background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-            border:1px solid rgba(255,255,255,0.03);
-            padding:16px;border-radius:12px;overflow:hidden;
-            display:flex;flex-direction:column;gap:12px;
-        }
-        .project-card img{width:100%;height:150px;object-fit:cover;border-radius:8px}
-        .project-card h3{margin:0}
-        .project-card p{color:var(--muted);margin:0;flex:1}
-        .btn{
-            display:inline-block;padding:10px 14px;border-radius:8px;background:var(--accent);
-            color:white;text-decoration:none;border:none;cursor:pointer;text-align:center;
-        }
-
-        /* Modal */
-        .modal-backdrop{position:fixed;inset:0;background:rgba(2,6,23,0.7);display:none;align-items:center;justify-content:center;z-index:50}
-        .modal{background:#071029;padding:18px;border-radius:12px;max-width:420px;width:100%;box-shadow:0 10px 30px rgba(0,0,0,0.6);}
-        .modal header{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
-        .close-btn{background:transparent;border:none;color:var(--muted);font-size:1.2rem;cursor:pointer}
-
-        /* Calculator styles */
-        .calc{
-            background:linear-gradient(180deg,#0b1220,#071026);padding:12px;border-radius:10px;color:var(--text);
-        }
-        .calc-screen{
-            background:rgba(255,255,255,0.02);padding:12px;border-radius:8px;margin-bottom:8px;
-            text-align:right;font-size:1.6rem;min-height:48px;display:flex;flex-direction:column;justify-content:center;
-            word-wrap:break-word;
-        }
-        .calc-keys{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
-        .key{padding:12px;border-radius:8px;background:rgba(255,255,255,0.03);border:none;color:var(--text);font-size:1rem;cursor:pointer}
-        .key.op{background:rgba(79,70,229,0.9)}
-        .key.equal{grid-column:span 2;background:#10b981}
-        .key.wide{grid-column:span 2}
-
-        /* Contact & footer */
-        .contact-container{display:flex;gap:16px;flex-wrap:wrap}
-        .contact-form, .contact-info{flex:1;min-width:260px}
-        .form-group input,.form-group textarea{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:#071029;color:var(--text)}
-        footer{margin-top:36px;padding:18px 0;text-align:center;color:var(--muted);font-size:0.95rem}
-
-        /* Responsive */
-        @media (max-width:600px){
-            nav ul{flex-direction:column}
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio de Hoover Andres Serna Castañeda</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Nueva fuente de Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="dynamic-background" aria-hidden="true"></div>
-
+    <div id="dynamic-background"></div> <!-- Fondo dinámico -->
     <header>
         <div class="container">
             <h1>Hoover Andres Serna Castañeda</h1>
             <p>Desarrollador de Software</p>
-            <nav aria-label="Navegación principal">
+            <nav>
                 <ul>
                     <li><a href="#about">Sobre Mí</a></li>
                     <li><a href="#projects">Proyectos</a></li>
@@ -100,281 +25,78 @@
         </div>
     </header>
 
-    <main>
-        <section id="about" class="container">
-            <h2>Sobre Mí</h2>
-            <div class="about-content" style="display:flex;gap:16px;align-items:center;flex-wrap:wrap">
-                <img src="assets/images/profile.jpg" alt="Foto de perfil de Hoover Andres Serna Castañeda" style="width:120px;height:120px;border-radius:12px;object-fit:cover">
-                <div>
-                    <p>Hola, soy <strong>Hoover Andres Serna Castañeda</strong>, un apasionado desarrollador de software de Pereira, Colombia. Me especializo en desarrollo web y móvil, y siempre estoy buscando nuevos desafíos para mejorar mis habilidades.</p>
-                    <p>Con experiencia en tecnologías como <strong>JavaScript, React, Node.js</strong>, me enfoco en crear soluciones eficientes y escalables.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="projects" class="container">
-            <h2>Proyectos Destacados</h2>
-            <div class="projects-grid" aria-live="polite">
-                <!-- Proyecto 1: Calculadora (abre modal con la app) -->
-                <div class="project-card">
-                    <img src="assets/images/project_calc.jpg" alt="Calculadora JavaScript">
-                    <h3>Calculadora JavaScript</h3>
-                    <p>Calculadora simple con operaciones básicas (+ - × ÷), soporte de teclado, punto decimal, borrar y limpiar.</p>
-                    <button class="btn" id="open-calc" aria-haspopup="dialog">Ver Calculadora</button>
-                </div>
-
-                <!-- Proyecto 2: App de Reservas -->
-                <div class="project-card">
-                    <img src="assets/images/project2.jpg" alt="Sistema de reservas">
-                    <h3>Sistema de Reservas</h3>
-                    <p>Gestión de reservas para canchas sintéticas usando Node.js, Express y MongoDB. Autenticación y panel administrativo.</p>
-                    <a href="#" class="btn" aria-label="Ver detalles del proyecto de reservas">Ver Detalles</a>
-                </div>
-
-                <!-- Proyecto 3: App Móvil con Flutter -->
-                <div class="project-card">
-                    <img src="assets/images/project3.jpg" alt="App móvil Flutter">
-                    <h3>App Móvil (Flutter)</h3>
-                    <p>Aplicación móvil desarrollada en Flutter para administración de tareas, con sincronización y notificaciones push.</p>
-                    <a href="#" class="btn" aria-label="Ver detalles del proyecto Flutter">Ver Detalles</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Modal: Calculadora -->
-        <div class="modal-backdrop" id="modal-backdrop" role="dialog" aria-modal="true" aria-hidden="true">
-            <div class="modal" role="document" aria-labelledby="calc-title">
-                <header>
-                    <h3 id="calc-title" style="margin:0">Calculadora JavaScript</h3>
-                    <button class="close-btn" id="close-modal" aria-label="Cerrar calculadora">&times;</button>
-                </header>
-
-                <div class="calc" id="calculator" aria-live="polite">
-                    <div class="calc-screen" id="calc-screen" aria-label="Pantalla de la calculadora">
-                        <div id="calc-expression" style="font-size:0.9rem;color:var(--muted);min-height:18px"></div>
-                        <div id="calc-output" style="font-size:1.4rem;word-break:break-all">0</div>
-                    </div>
-                    <div class="calc-keys" role="group" aria-label="Teclado de la calculadora">
-                        <!-- fila 1 -->
-                        <button class="key" data-action="clear" aria-label="Limpiar">C</button>
-                        <button class="key" data-action="delete" aria-label="Borrar">DEL</button>
-                        <button class="key" data-value="%" aria-label="Porcentaje">%</button>
-                        <button class="key op" data-value="/" aria-label="Dividir">÷</button>
-
-                        <!-- fila 2 -->
-                        <button class="key" data-value="7">7</button>
-                        <button class="key" data-value="8">8</button>
-                        <button class="key" data-value="9">9</button>
-                        <button class="key op" data-value="*" aria-label="Multiplicar">×</button>
-
-                        <!-- fila 3 -->
-                        <button class="key" data-value="4">4</button>
-                        <button class="key" data-value="5">5</button>
-                        <button class="key" data-value="6">6</button>
-                        <button class="key op" data-value="-" aria-label="Restar">−</button>
-
-                        <!-- fila 4 -->
-                        <button class="key" data-value="1">1</button>
-                        <button class="key" data-value="2">2</button>
-                        <button class="key" data-value="3">3</button>
-                        <button class="key op" data-value="+" aria-label="Sumar">+</button>
-
-                        <!-- fila 5 -->
-                        <button class="key wide" data-value="0" aria-label="Cero">0</button>
-                        <button class="key" data-value=".">.</button>
-                        <button class="key equal" data-action="calculate" aria-label="Igual">=</button>
-                    </div>
-                </div>
+    <section id="about" class="container">
+        <h2>Sobre Mí</h2>
+        <div class="about-content">
+            <img src="assets/images/profile.jpg" alt="Hoover Andres Serna Castañeda" class="profile-img">
+            <div class="about-text">
+                <p>Hola, soy <strong>Hoover Andres Serna Castañeda</strong>, un apasionado desarrollador de software de Pereira, Colombia. Me especializo en desarrollo web y móvil, y siempre estoy buscando nuevos desafíos para mejorar mis habilidades.</p>
+                <p>Con experiencia en tecnologías como <strong>JavaScript, React, Node.js </strong>, me enfoco en crear soluciones eficientes y escalables.</p>
             </div>
         </div>
+    </section>
 
-        <section id="contact" class="container">
-            <h2>Contacto</h2>
-            <p>¿Tienes un proyecto en mente? ¡Contáctame!</p>
-            <div class="contact-container">
-                <div class="contact-form">
-                    <form id="contact-form" action="https://formspree.io/f/tu-endpoint" method="POST">
-                        <div class="form-group">
-                            <input type="text" id="name" name="name" placeholder="Nombre" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" id="email" name="email" placeholder="Correo electrónico" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea id="message" name="message" placeholder="Mensaje" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn">Enviar Mensaje</button>
-                    </form>
-                </div>
-
-                <div class="contact-info">
-                    <ul style="list-style:none;padding:0">
-                        <li><a href="mailto:hoover.serna@ucp.edu.co" style="color:var(--muted);text-decoration:none"><i class="fas fa-envelope"></i> hoover.serna@ucp.edu.co</a></li>
-                        <li style="margin-top:8px"><a href="https://github.com/andresito1088304" target="_blank" style="color:var(--muted);text-decoration:none"><i class="fab fa-github"></i> GitHub</a></li>
-                        <li style="margin-top:8px"><a href="https://www.linkedin.com/in/hoover-andres-serna-casta%C3%B1eda-3a67b0337/?originalSubdomain=co" target="_blank" style="color:var(--muted);text-decoration:none"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
-                    </ul>
-                </div>
+    <section id="projects" class="container">
+        <h2>Proyectos Destacados</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <img src="assets/images/project1.jpg" alt="Proyecto 1">
+                <h3>Proyecto 1</h3>
+                <p>Un sistema de gestión de reservas para canchas sinteticas con Javascript y Node.js.</p>
+                <a href="#" class="btn">Ver Detalles</a>
             </div>
-        </section>
-    </main>
+            
+    </section>
+
+    <!-- Sección de Contacto (mejorada) -->
+    <section id="contact" class="container">
+        <h2>Contacto</h2>
+        <p>¿Tienes un proyecto en mente? ¡Contáctame!</p>
+        <div class="contact-container">
+            <!-- Formulario de contacto -->
+            <div class="contact-form">
+                <form id="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Correo electrónico" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Mensaje" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Enviar Mensaje</button>
+                </form>
+            </div>
+            <!-- Información de contacto -->
+            <div class="contact-info">
+                <ul class="contact-list">
+                    <li>
+                        <a href="mailto:hoover.serna@ucp.edu.co">
+                            <i class="fas fa-envelope"></i> hoover.serna@ucp.edu.co
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/andresito1088304" target="_blank">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/hoover-andres-serna-casta%C3%B1eda-3a67b0337/?originalSubdomain=co" target="_blank">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
     <footer>
         <div class="container">
-            <p>&copy; <span id="year"></span> Hoover Andres Serna Castañeda. Todos los derechos reservados.</p>
+            <p>&copy; 2023 Hoover Andres Serna Castañeda. Todos los derechos reservados.</p>
         </div>
     </footer>
 
-    <script>
-    // Año dinámico
-    document.getElementById("year").textContent = new Date().getFullYear();
-
-    // Modal calculadora
-    const openCalcBtn = document.getElementById('open-calc');
-    const modalBackdrop = document.getElementById('modal-backdrop');
-    const closeModalBtn = document.getElementById('close-modal');
-
-    function openModal(){
-        modalBackdrop.style.display = 'flex';
-        modalBackdrop.setAttribute('aria-hidden','false');
-        // foco accesible
-        document.getElementById('calc-output').focus?.();
-    }
-    function closeModal(){
-        modalBackdrop.style.display = 'none';
-        modalBackdrop.setAttribute('aria-hidden','true');
-        openCalcBtn.focus();
-    }
-    openCalcBtn.addEventListener('click', openModal);
-    closeModalBtn.addEventListener('click', closeModal);
-    modalBackdrop.addEventListener('click', (e)=>{
-        if(e.target === modalBackdrop) closeModal();
-    });
-    document.addEventListener('keydown', (e)=>{
-        if(e.key === 'Escape' && modalBackdrop.style.display === 'flex') closeModal();
-    });
-
-    // Lógica de la calculadora
-    (function(){
-        const keys = document.querySelectorAll('.key');
-        const outputEl = document.getElementById('calc-output');
-        const exprEl = document.getElementById('calc-expression');
-
-        let expression = ''; // expresión interna para evaluar
-        let display = '0';
-
-        function updateDisplay(){
-            exprEl.textContent = expression || '';
-            outputEl.textContent = display;
-        }
-
-        function safeEval(expr){
-            // Reemplazos para seguridad y legibilidad
-            // '%' se interpreta como modulo dividido por 100 para porcentajes
-            try {
-                // Convertir '×' '÷' a '*' y '/'
-                expr = expr.replace(/×/g, '*').replace(/÷/g,'/').replace(/−/g,'-');
-                // Manejar porcentaje: "50%" -> "(50/100)"
-                expr = expr.replace(/(\d+(\.\d+)?)%/g, '($1/100)');
-                // Evaluar con Function (mejor que eval directo)
-                // Nota: esto sigue permitiendo expresiones matemáticas, no código arbitrario.
-                // Evitamos caracteres inválidos
-                if (/[^0-9+\-*/().% ]/.test(expr)) throw new Error('Caracter inválido');
-                // eslint-disable-next-line no-new-func
-                const result = Function('"use strict"; return (' + expr + ')')();
-                if (Number.isFinite(result)) {
-                    return result;
-                } else {
-                    throw new Error('Resultado inválido');
-                }
-            } catch (err) {
-                return 'Error';
-            }
-        }
-
-        function appendValue(val){
-            // si display es '0' y el valor es número o '.', reemplazar
-            if(display === '0' && /[0-9]/.test(val)) {
-                display = val;
-            } else {
-                display = (display === '0' && val === '0') ? '0' : display + val;
-            }
-        }
-
-        function pressKey(keyEl){
-            const val = keyEl.dataset.value;
-            const action = keyEl.dataset.action;
-
-            if(action === 'clear'){
-                expression = '';
-                display = '0';
-            } else if(action === 'delete'){
-                // borrar último caracter en display si hay
-                if(display.length > 1) {
-                    display = display.slice(0,-1);
-                } else {
-                    display = '0';
-                }
-            } else if(action === 'calculate'){
-                // concatenar display a expression y evaluar
-                expression = expression + display;
-                const res = safeEval(expression);
-                display = (res === 'Error') ? 'Error' : String(res);
-                expression = ''; // reiniciar expresión
-            } else if(val !== undefined){
-                // si val es operador y display termina en operador -> reemplazar operator
-                if(/^[+\-*/%]$/.test(val)){
-                    // añadir display a la expresión y el operador, reiniciar display
-                    expression = expression + display + val;
-                    display = '0';
-                } else if(val === '.'){
-                    if(!display.includes('.')) display += '.';
-                } else {
-                    // número
-                    if(display === '0') display = val;
-                    else if(display === 'Error') { display = val; }
-                    else display += val;
-                }
-            }
-            updateDisplay();
-        }
-
-        keys.forEach(k => k.addEventListener('click', ()=>pressKey(k)));
-
-        // Soporte de teclado
-        document.addEventListener('keydown', (e)=>{
-            if(modalBackdrop.style.display !== 'flex') return;
-            const key = e.key;
-            if(/[0-9]/.test(key)){
-                const button = Array.from(keys).find(b => b.dataset.value === key);
-                if(button) pressKey(button);
-                e.preventDefault();
-            } else if(key === 'Enter' || key === '='){
-                const button = Array.from(keys).find(b => b.dataset.action === 'calculate');
-                if(button) pressKey(button);
-                e.preventDefault();
-            } else if(key === 'Backspace'){
-                const button = Array.from(keys).find(b => b.dataset.action === 'delete');
-                if(button) pressKey(button);
-                e.preventDefault();
-            } else if(key === 'Escape'){
-                const button = Array.from(keys).find(b => b.dataset.action === 'clear');
-                if(button) pressKey(button);
-                e.preventDefault();
-            } else if(key === '.' || key === ','){
-                const button = Array.from(keys).find(b => b.dataset.value === '.');
-                if(button) pressKey(button);
-                e.preventDefault();
-            } else if(['+','-','*','/','%'].includes(key)){
-                // map * / + - %
-                const button = Array.from(keys).find(b => b.dataset.value === key);
-                if(button) pressKey(button);
-                e.preventDefault();
-            }
-        });
-
-        // Inicializar
-        updateDisplay();
-    })();
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
