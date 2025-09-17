@@ -3,20 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio de Hoover Andres Serna Castañeda</title>
+    <title>Hoover Andrés Serna Castañeda - Desarrollador Full Stack</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- Nueva fuente de Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="dynamic-background"></div> <!-- Fondo dinámico -->
     <header>
-        <div class="container">
-            <h1>Hoover Andres Serna Castañeda</h1>
-            <p>Desarrollador de Software</p>
+        <div class="header-content">
+            <div class="logo">Hoover Serna</div>
             <nav>
                 <ul>
+                    <li><a href="#home" class="active">Inicio</a></li>
                     <li><a href="#about">Sobre Mí</a></li>
                     <li><a href="#projects">Proyectos</a></li>
                     <li><a href="#contact">Contacto</a></li>
@@ -25,75 +23,205 @@
         </div>
     </header>
 
-    <section id="about" class="container">
-        <h2>Sobre Mí</h2>
-        <div class="about-content">
-            <img src="assets/images/profile.jpg" alt="Hoover Andres Serna Castañeda" class="profile-img">
-            <div class="about-text">
-                <p>Hola, soy <strong>Hoover Andres Serna Castañeda</strong>, un apasionado desarrollador de software de Pereira, Colombia. Me especializo en desarrollo web y móvil, y siempre estoy buscando nuevos desafíos para mejorar mis habilidades.</p>
-                <p>Con experiencia en tecnologías como <strong>JavaScript, React, Node.js </strong>, me enfoco en crear soluciones eficientes y escalables.</p>
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Hoover Andrés Serna</h1>
+                <div class="subtitle">Desarrollador Full Stack</div>
+                <p>Especializado en desarrollo web moderno con JavaScript, React, Node.js y tecnologías emergentes. Creando soluciones digitales innovadoras desde Pereira, Colombia.</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">
+                        <i class="fas fa-code"></i>
+                        Ver Proyectos
+                    </a>
+                    <a href="#contact" class="btn btn-outline">
+                        <i class="fas fa-envelope"></i>
+                        Contáctame
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="projects" class="container">
-        <h2>Proyectos Destacados</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <img src="assets/images/project1.jpg" alt="Proyecto 1">
-                <h3>Proyecto 1</h3>
-                <p>Un sistema de gestión de reservas para canchas sinteticas con Javascript y Node.js.</p>
-                <a href="#" class="btn">Ver Detalles</a>
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title fade-in">Sobre Mí</h2>
+            <div class="about-content">
+                <div class="about-image fade-in">
+                    <div class="profile-img">
+                        <i class="fas fa-user"></i>
+                    </div>
+                </div>
+                <div class="about-text fade-in">
+                    <h3>¡Hola! Soy Hoover</h3>
+                    <p>Desarrollador de software apasionado por crear experiencias digitales excepcionales. Con experiencia sólida en el desarrollo full-stack, me especializo en construir aplicaciones web modernas, escalables y centradas en el usuario.</p>
+                    <p>Siempre estoy buscando nuevos desafíos que me permitan crecer profesionalmente y contribuir con soluciones innovadoras. Me encanta trabajar en equipo y aprender nuevas tecnologías.</p>
+                    
+                    <div class="skills">
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">Express</span>
+                    </div>
+                </div>
             </div>
-            
+        </div>
     </section>
 
-    <!-- Sección de Contacto (mejorada) -->
-    <section id="contact" class="container">
-        <h2>Contacto</h2>
-        <p>¿Tienes un proyecto en mente? ¡Contáctame!</p>
-        <div class="contact-container">
-            <!-- Formulario de contacto -->
-            <div class="contact-form">
-                <form id="contact-form">
-                    <div class="form-group">
-                        <input type="text" id="name" name="name" placeholder="Nombre" required>
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title fade-in">Proyectos Destacados</h2>
+            <div class="projects-grid">
+                <div class="project-card fade-in">
+                    <div class="project-image">
+                        <i class="fas fa-calendar-check"></i>
                     </div>
-                    <div class="form-group">
-                        <input type="email" id="email" name="email" placeholder="Correo electrónico" required>
+                    <div class="project-content">
+                        <h3>Sistema de Gestión de Reservas</h3>
+                        <p>Aplicación web completa para la gestión de reservas de canchas sintéticas. Incluye panel de administración, sistema de pagos y notificaciones en tiempo real.</p>
+                        <div class="project-tags">
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">Express</span>
+                            <span class="tag">MongoDB</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-primary btn-small">
+                                <i class="fas fa-external-link-alt"></i>
+                                Ver Demo
+                            </a>
+                            <a href="#" class="btn btn-outline btn-small">
+                                <i class="fab fa-github"></i>
+                                Código
+                            </a>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <textarea id="message" name="message" placeholder="Mensaje" rows="5" required></textarea>
+                </div>
+
+                <div class="project-card fade-in">
+                    <div class="project-image">
+                        <i class="fas fa-shopping-cart"></i>
                     </div>
-                    <button type="submit" class="btn">Enviar Mensaje</button>
-                </form>
+                    <div class="project-content">
+                        <h3>E-Commerce Platform</h3>
+                        <p>Plataforma de comercio electrónico moderna con carrito de compras, pasarela de pagos integrada y panel administrativo completo.</p>
+                        <div class="project-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">Stripe</span>
+                            <span class="tag">PostgreSQL</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-primary btn-small">
+                                <i class="fas fa-external-link-alt"></i>
+                                Ver Demo
+                            </a>
+                            <a href="#" class="btn btn-outline btn-small">
+                                <i class="fab fa-github"></i>
+                                Código
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card fade-in">
+                    <div class="project-image">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Task Management App</h3>
+                        <p>Aplicación de gestión de tareas con funcionalidades avanzadas como colaboración en tiempo real, etiquetas personalizadas y reportes de productividad.</p>
+                        <div class="project-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">Socket.io</span>
+                            <span class="tag">Chart.js</span>
+                            <span class="tag">Firebase</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-primary btn-small">
+                                <i class="fas fa-external-link-alt"></i>
+                                Ver Demo
+                            </a>
+                            <a href="#" class="btn btn-outline btn-small">
+                                <i class="fab fa-github"></i>
+                                Código
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <!-- Información de contacto -->
-            <div class="contact-info">
-                <ul class="contact-list">
-                    <li>
-                        <a href="mailto:hoover.serna@ucp.edu.co">
-                            <i class="fas fa-envelope"></i> hoover.serna@ucp.edu.co
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/andresito1088304" target="_blank">
-                            <i class="fab fa-github"></i> GitHub
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.linkedin.com/in/hoover-andres-serna-casta%C3%B1eda-3a67b0337/?originalSubdomain=co" target="_blank">
-                            <i class="fab fa-linkedin"></i> LinkedIn
-                        </a>
-                    </li>
-                </ul>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title fade-in">Contáctame</h2>
+            <p class="contact-subtitle fade-in">
+                ¿Tienes un proyecto interesante? ¡Me encantaría conocer más detalles!
+            </p>
+            <div class="contact-container">
+                <div class="contact-form fade-in">
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Cuéntame sobre tu proyecto..." rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <i class="fas fa-paper-plane"></i>
+                            Enviar Mensaje
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="contact-info fade-in">
+                    <a href="mailto:hoover.serna@ucp.edu.co" class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <strong>Email</strong>
+                            <div>hoover.serna@ucp.edu.co</div>
+                        </div>
+                    </a>
+                    
+                    <a href="https://github.com/andresito1088304" target="_blank" class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <div>
+                            <strong>GitHub</strong>
+                            <div>github.com/andresito1088304</div>
+                        </div>
+                    </a>
+                    
+                    <a href="https://www.linkedin.com/in/hoover-andres-serna-casta%C3%B1eda-3a67b0337/?originalSubdomain=co" target="_blank" class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <div>
+                            <strong>LinkedIn</strong>
+                            <div>Perfil Profesional</div>
+                        </div>
+                    </a>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <strong>Ubicación</strong>
+                            <div>Pereira, Colombia</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <p>&copy; 2023 Hoover Andres Serna Castañeda. Todos los derechos reservados.</p>
+            <p>&copy; 2024 Hoover Andrés Serna Castañeda. Diseñado y desarrollado con ❤️</p>
         </div>
     </footer>
 
